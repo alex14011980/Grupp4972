@@ -25,12 +25,13 @@
 // }
 
 
-// int day = int.Parse(Console.ReadLine()??"0");
+
 
 Console.WriteLine("Введите номер дня недели: ");                        // Пользовательский ввод
-var day = int.Parse(Console.ReadLine()??"0");                             // Назначаем переменную
-Dictionary<string, int> Directory = new Dictionary<string, int>();        //Cоздаем словарь Dictionary  
+var day = int.Parse(Console.ReadLine()??"0");                           // Назначаем переменную                                                                            
+Dictionary<int, string> Directory = new Dictionary<int, string>();        //Cоздаем словарь Dictionary  
 var dayOfWeeky = new Dictionary<int, string>()
+
 {
     [1] = "Понедельник",
     [2] = "Вторник",
@@ -40,16 +41,16 @@ var dayOfWeeky = new Dictionary<int, string>()
     [6] = "Суббота",
     [7] = "Воскресенье"   
  
-}; 
+};
 
 if(day <= 5)                                                                //Проверяем на наличие рабочие дни 
 {
-    Console.WriteLine(" - Нет");                                             //Выводим сообщение
+    Console.WriteLine(dayOfWeeky[day] + " - Нет");                                             //Выводим сообщение
 
 }
 else if(day <=7)                                                               // Проверяем на наличие выходного дня
 {
-    Console.WriteLine(" - Да");                                                 // Выводим сообщение
+    Console.WriteLine(dayOfWeeky[day] + " - Да");                                                 // Выводим сообщение
 }
 else
 {
