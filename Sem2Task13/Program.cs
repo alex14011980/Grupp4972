@@ -16,7 +16,7 @@
 
 Console.WriteLine("Введите число: ");                   // Пользовательский ввод
 int number = int.Parse(Console.ReadLine()??"0");         // Назначаем переменную
-if (number < 100)
+if (number < 100)                                           //Проверяем наличие третьей цифры
 {
     Console.WriteLine(" Третьей цифры нет");
 }
