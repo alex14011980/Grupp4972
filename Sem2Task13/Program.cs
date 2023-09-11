@@ -16,46 +16,45 @@
 
 Console.WriteLine("Введите число: ");                   // Пользовательский ввод
 int number = int.Parse(Console.ReadLine()??"0");         // Назначаем переменную
-
-if(number < 100)                                            // Проверяем на наличие третьей цифры
+if (number < 100)
 {
-    Console.WriteLine("Третьей цифры нет");
+    Console.WriteLine(" Третьей цифры нет");
 }
-else if(number < 1000)                                               // Выводим третью цифру. и. т.д. до 10 знаков
+else
 {
-    number = number %10;
+    if(number < 1000)                                               // Выводим третью цифру. и. т.д. до 10 знаков
+    {
+        number = number %10;
     
-}
-else if(number < 10000) 
-{
-    number = (number/10)%10;
+    }
+    else if(number < 10000) 
+    {
+        number = (number/10)%10;
     
-} 
-else if(number < 100000) 
-{
-    number = (number/100)%10;
+    } 
+    else if(number < 100000) 
+    {
+        number = (number/100)%10;
     
-}
-else if(number < 1000000) 
-{
-    number = (number/1000)%10;
+    }
+    else if(number < 1000000) 
+    {
+        number = (number/1000)%10;
      
-}
-else if(number < 10000000)
-{
-    number = (number/10000)%10;
+    }
+    else if(number < 10000000)
+    {
+        number = (number/10000)%10;
      
-}
-else if(number < 100000000) 
-{
-    number = (number/100000)%10;
+    }
+    else if(number < 100000000) 
+    {
+        number = (number/100000)%10;
      
+    }
+    else if (number < 1000000000) 
+    {
+     number = (number/1000000)%10;
+    }
+    Console.WriteLine(number + "- Третья цифра числа");
 }
-else if (number < 1000000000) 
-{
-    number = (number/1000000)%10;
-    
-}
-
-Console.WriteLine(number + " - Третья цифра числа"); 
-
