@@ -89,7 +89,7 @@ void PrintArray(int[] arr)
     Console.WriteLine(arr[arr.Length - 1] + "]");
 }
 
-// Вычисляем факториал
+
 int[] GenArr(int len)
 {
     int[] arr = new int[len];
