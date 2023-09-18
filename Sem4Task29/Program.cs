@@ -1,14 +1,14 @@
 ﻿// Задача №29 Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-int ReadData(string msg)
+int ReadData(string msg) //Вводим данные
 {
     Console.WriteLine(msg);
     int num = int.Parse(Console.ReadLine() ?? "0");
     return num;
 }
 
-// Печатаем результат
-void PrintArray(int[] arr)
+
+void PrintArray(int[] arr)  // Печатаем результат
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length - 1; i++)
@@ -18,7 +18,7 @@ void PrintArray(int[] arr)
     }
     Console.WriteLine(arr[arr.Length - 1] + "]");
 }
-int[] GenArr(int len)
+int[] GenArr(int len) //Создаем массив со случайными числами. Указываем диапазон чисел массива 
 {
     int[] arr = new int[len];
     Random rnd = new Random();
@@ -32,3 +32,4 @@ int[] GenArr(int len)
 int num = ReadData("Введите число: ");
 int[] res = GenArr(num);
 PrintArray(res);
+// вывод сообщения и вызов метода GenArr

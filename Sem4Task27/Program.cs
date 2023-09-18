@@ -3,13 +3,13 @@
 // 82 -> 10
 // 9012 -> 12
 
-int ReadData(string msg)
+int ReadData(string msg) // Вводим данные
 {
     Console.WriteLine(msg);
     int num = int.Parse(Console.ReadLine() ?? "0");
     return num;
 }
-int sumDigit(int num)
+int sumDigit(int num) //считаем сумму цифр в числе
 {
     int res =0;
     while (num > 0)
@@ -21,11 +21,12 @@ int sumDigit(int num)
     return res;
 }
 
-void PrintResult(string msg)
+void PrintResult(string msg) //Печатаем результат
 {
     Console.WriteLine(msg);
 }
 
 int num = ReadData("Введите число: ");
 int res = sumDigit(num);
-PrintResult("Сумма чисел = " +res);
+PrintResult("Сумма чисел = " +res);\
+// вывод сообщения и вызов метода sumDigit
